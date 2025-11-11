@@ -1,0 +1,34 @@
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+#      - "443:443/tcp" # Optional, for HTTPS admin interface
+    environment:
+      TZ: 'America/New_York' # Replace with your timezone
+      WEBPASSWORD: ${WEBPASSWORD} # Replace with a strong password
+      FTLCONF_dns_listeningMode: 'all' # Recommended for Docker's default bridge network
+    volumes:
+      - 'pihole-etc:/etc/pihole'
+      - 'pihole-dnsmasq:/etc/dnsmasq.d'
+    cap_add:
+      - NET_ADMIN # Required for Pi-hole's network functionality
+    restart: unless-stopped
+    networks:
+      - pihole-network
+
+ cloudflared:
+   image: cloudflare/cloudflared:latest
+   command: tunnel --no-autoupdate run
+   environment:
+      - TUNNEL_TOKEN=${CF_TOKEN}
+   restart: unless-stopped
+   networks:
+      - moontv-network
+      
+networks:
+  pihole-network:
+    driver: bridge

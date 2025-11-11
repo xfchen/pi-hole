@@ -1,0 +1,95 @@
+(undo-tree-save-format-version . 1)
+"b5811381470458df95aab6bd356f87a294192f46"
+[nil nil nil nil (26896 57305 365178 0) 0 nil]
+([nil nil ((1 . 647) (t . -1)) nil (26896 57402 993566 0) 0 nil] [nil nil ((1 . 1096) (t . -1)) (("services:
+  moontv-core:
+    image: 'ghcr.io/szemeng76/lunatv:latest'
+    container_name: moontv-core
+    restart: on-failure
+    ports:
+      - '3000:3000'
+    environment:
+      - USERNAME=admin
+      - PASSWORD=YeSqHWs$127UAB!u
+      - NEXT_PUBLIC_STORAGE_TYPE=kvrocks
+      - 'KVROCKS_URL=redis://moontv-kvrocks:6666'
+      - 'SITE_BASE=https://lunatv.cohomology.dpdns.org'
+      - 'NEXT_PUBLIC_SITE_NAME=LunaTV Coolified on Oracle'
+    networks:
+      - moontv-network
+    depends_on:
+      - moontv-kvrocks
+  moontv-kvrocks:
+    image: apache/kvrocks
+    container_name: moontv-kvrocks
+    restart: unless-stopped
+    volumes:
+      - 'kvrocks-data:/var/lib/kvrocks'
+    networks:
+      - moontv-network
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run
+    environment:
+       - TUNNEL_TOKEN=eyJhIjoiMjU0MDUzYzYxMTk0NzY2M2I1ZTBiM2M5N2I3Zjg3MGEiLCJ0IjoiMzBhYzFhODQtMzk0Ni00ZjVlLTllMjctMWVhZDgzNjE3MThiIiwicyI6Ik1XTmtZbUZpTkdVdE1XUmtNeTAwTkRReExXRXdNRFV0TURVNVpXSTNaamMyTW1FMCJ9
+    restart: unless-stopped
+    networks:
+      - moontv-network" . 1) (undo-tree-id0 . -1095) (undo-tree-id1 . -1095) (undo-tree-id2 . -673) (undo-tree-id3 . -1095) (undo-tree-id4 . -1095) (undo-tree-id5 . -1095) (undo-tree-id6 . -1095) (undo-tree-id7 . -1095) (undo-tree-id8 . -1095) (undo-tree-id9 . -1095)) (26896 57304 59858 0) 0 nil])
+([nil nil ((466 . 468)) nil (26896 57402 993565 0) 0 nil])
+nil
+([nil nil (("P" . -466) (undo-tree-id37 . -1) ("P" . -467) (undo-tree-id38 . -1) 468) nil (26896 57402 993565 0) 0 nil])
+([nil nil ((151 . 152)) nil (26896 57402 993563 0) 0 nil])
+([nil nil (("Los" . 248) (undo-tree-id36 . -3)) nil (26896 57402 993562 0) 0 nil])
+([nil nil (("_Angeles" . 248) (undo-tree-id35 . -8)) nil (26896 57402 993561 0) 0 nil])
+([nil nil ((248 . 255)) nil (26896 57402 993560 0) 0 nil])
+([nil nil (("y" . -252) (undo-tree-id32 . -1) ("o" . -253) (undo-tree-id33 . -1) ("r" . -254) (undo-tree-id34 . -1) 255) nil (26896 57402 993560 0) 0 nil])
+([nil nil ((252 . 256)) nil (26896 57402 993556 0) 0 nil])
+([nil nil (("y" . -307) (undo-tree-id11 . -1) ("o" . -308) (undo-tree-id12 . -1) ("u" . -309) (undo-tree-id13 . -1) ("r" . -310) (undo-tree-id14 . -1) ("_" . -311) (undo-tree-id15 . -1) ("s" . -312) (undo-tree-id16 . -1) ("e" . -313) (undo-tree-id17 . -1) ("c" . -314) (undo-tree-id18 . -1) ("u" . -315) (undo-tree-id19 . -1) ("r" . -316) (undo-tree-id20 . -1) ("e" . -317) (undo-tree-id21 . -1) ("_" . -318) (undo-tree-id22 . -1) ("p" . -319) (undo-tree-id23 . -1) ("a" . -320) (undo-tree-id24 . -1) ("s" . -321) (undo-tree-id25 . -1) ("s" . -322) (undo-tree-id26 . -1) ("w" . -323) (undo-tree-id27 . -1) ("o" . -324) (undo-tree-id28 . -1) ("r" . -325) (undo-tree-id29 . -1) ("d" . -326) (undo-tree-id30 . -1) ("'" . -327) (undo-tree-id31 . -1) 328) nil (26896 57402 993554 0) 0 nil])
+([nil nil (("'" . -306) (undo-tree-id10 . -1) 307) nil (26896 57402 993536 0) 0 nil])
+([nil nil ((306 . 320)) nil (26896 57402 993527 0) 0 nil])
+([nil nil ((637 . 642) (t 26896 57402 995987 687000)) nil (26899 18088 703448 0) 0 nil])
+([nil nil ((642 . 678)) nil (26899 18088 703447 0) 0 nil])
+([nil nil ((" " . 638) (undo-tree-id82 . -1) (" " . 638) (" " . 638) (" " . 638)) nil (26899 18088 703446 0) 0 nil])
+([nil nil (("-" . 465) ("c" . 465) ("t" . 465) ("e" . 465) ("/" . 465) ("." . 465)) nil (26899 18088 703445 0) 0 nil])
+([nil nil ((471 . 475)) nil (26899 18088 703444 0) 0 nil])
+([nil nil (("c" . 498) ("t" . 498) ("e" . 498) ("/" . 498) ("." . 498)) nil (26899 18088 703443 0) 0 nil])
+([nil nil ((498 . 500)) nil (26899 18088 703442 0) 0 nil])
+([nil nil (("i" . -498) (undo-tree-id80 . -1) ("p" . -499) (undo-tree-id81 . -1) 500) nil (26899 18088 703441 0) 0 nil])
+([nil nil ((498 . 504)) nil (26899 18088 703440 0) 0 nil])
+([nil nil (("d" . 512) ("." . 512)) nil (26899 18088 703439 0) 0 nil])
+([nil nil (("      " . 672) (undo-tree-id79 . -6) (671 . 679)) nil (26899 18088 703438 0) 0 nil])
+([nil nil ((673 . 676)) nil (26899 18088 703437 0) 0 nil])
+([nil nil (("w" . -675) (undo-tree-id78 . -1) 676) nil (26899 18088 703437 0) 0 nil])
+([nil nil ((675 . 681)) nil (26899 18088 703436 0) 0 nil])
+([nil nil (("r" . 657) ("e" . 657) ("d" . 657) ("a" . 657) ("e" . 657) ("r" . 657)) nil (26899 18088 703435 0) 0 nil])
+([nil nil ((657 . 663)) nil (26899 18088 703434 0) 0 nil])
+([nil nil ((681 . 682)) nil (26899 18088 703433 0) 0 nil])
+([nil nil ((682 . 683)) nil (26899 18088 703433 0) 0 nil])
+([nil nil ((683 . 685)) nil (26899 18088 703432 0) 0 nil])
+([nil nil ((685 . 695)) nil (26899 18088 703432 0) 0 nil])
+([nil nil (("w" . -694) (undo-tree-id77 . -1) 695) nil (26899 18088 703431 0) 0 nil])
+([nil nil ((694 . 700)) nil (26899 18088 703430 0) 0 nil])
+([nil nil ((700 . 703)) nil (26899 18088 703430 0) 0 nil])
+([nil nil ((703 . 705)) nil (26899 18088 703429 0) 0 nil])
+([nil nil ((705 . 719)) nil (26899 18088 703429 0) 0 nil])
+([nil nil ((667 . 674)) nil (26899 18088 703428 0) 0 nil])
+([nil nil ((" " . -673) (undo-tree-id76 . -1) 674) nil (26899 18088 703427 0) 0 nil])
+([nil nil (("
+" . -667) (undo-tree-id70 . -1) (" " . -668) (undo-tree-id71 . -1) (" " . -669) (undo-tree-id72 . -1) (" " . -670) (undo-tree-id73 . -1) (" " . -671) (undo-tree-id74 . -1) (" " . -672) (undo-tree-id75 . -1) 673) nil (26899 18088 703426 0) 0 nil])
+([nil nil ((672 . 673)) nil (26899 18088 703422 0) 0 nil])
+([nil nil ((673 . 677)) nil (26899 18088 703422 0) 0 nil])
+([nil nil ((677 . 686)) nil (26899 18088 703421 0) 0 nil])
+([nil nil ((686 . 689)) nil (26899 18088 703421 0) 0 nil])
+([nil nil (("c" . -675) (undo-tree-id45 . -1) (undo-tree-id46 . -1) ("l" . -676) (undo-tree-id47 . -1) (undo-tree-id48 . -1) ("o" . -677) (undo-tree-id49 . -1) (undo-tree-id50 . -1) ("u" . -678) (undo-tree-id51 . -1) (undo-tree-id52 . -1) ("d" . -679) (undo-tree-id53 . -1) (undo-tree-id54 . -1) ("f" . -680) (undo-tree-id55 . -1) (undo-tree-id56 . -1) ("l" . -681) (undo-tree-id57 . -1) (undo-tree-id58 . -1) ("a" . -682) (undo-tree-id59 . -1) (undo-tree-id60 . -1) ("r" . -683) (undo-tree-id61 . -1) (undo-tree-id62 . -1) ("e" . -684) (undo-tree-id63 . -1) (undo-tree-id64 . -1) (":" . -685) (undo-tree-id65 . -1) (undo-tree-id66 . -1) ("
+" . -686) (undo-tree-id67 . -1) (" " . -687) (undo-tree-id68 . -1) (" " . -688) (undo-tree-id69 . -1) 689) nil (26899 18088 703419 0) 0 nil])
+([nil nil ((675 . 886)) nil (26899 18088 703406 0) 0 nil])
+([nil nil ((" " . -674) (undo-tree-id39 . -1) (undo-tree-id40 . -1) (undo-tree-id41 . -1) (undo-tree-id42 . -1) (" " . -675) (undo-tree-id43 . -1) (" " . -676) (undo-tree-id44 . -1) 677) nil (26899 18088 703405 0) 0 nil])
+([nil nil ((" " . 688)) nil (26899 18088 703392 0) 0 nil])
+([nil nil ((" " . 728)) nil (26899 18088 703391 0) 0 nil])
+([nil nil ((" " . 767)) nil (26899 18088 703391 0) 0 nil])
+([nil nil ((" " . 783)) nil (26899 18088 703390 0) 0 nil])
+([nil nil ((" " . 816)) nil (26899 18088 703390 0) 0 nil])
+([nil nil ((" " . 843)) nil (26899 18088 703388 0) 0 nil])
+([nil current ((877 . 884)) nil (26899 18088 703385 0) 0 nil])
+nil
