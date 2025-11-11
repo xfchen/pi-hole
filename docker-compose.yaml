@@ -27,7 +27,7 @@ services:
       - TUNNEL_TOKEN=${CF_TOKEN}
    restart: unless-stopped
    networks:
-      - moontv-network
+      - pihole-network
       
 networks:
   pihole-network:
